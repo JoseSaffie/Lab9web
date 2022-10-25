@@ -1,0 +1,37 @@
+@base <http://raw.githubusercontent.com/JoseSaffie/Lab9web/main/foafb.ttl> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix social: <http://users.dcc.uchile.cl/~ahogan/social.ttl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+
+<> a foaf:Document ;
+   dc:date "2021-10-25"^^xsd:date ;
+   dc:title "Matias's FOAF Profile"@es ;
+   foaf:primaryTopic <#mr> ;
+   dc:creator <#mr> .
+
+<#mr> a foaf:Person ;
+   rdfs:label "Matias Lopez" ;
+   rdfs:comment "Industrial Engineer Student"@en , "Estudiante de Ingenieria Industrial"@es ;
+   foaf:name "Matias Lopez" ;
+   foaf:givenName "Matias" ;
+   foaf:familyName "Lopez" ;
+   foaf:age 21 ; 
+   foaf:img <https://i.imgur.com/wQuiB7Q.jpeg> ; (la mia)
+   foaf:knows <http://anakena.dcc.uchile.cl/~pberrios/Watos/foaf.ttl> , 
+	      <http://anakena.dcc.uchile.cl/~kcastill/foaf.ttl#kc>,
+	      <http://anakena.dcc.uchile.cl/~elmoreno/foaf.ttl> ,
+ 	      <http://users.dcc.uchile.cl/~ahogan/foaf.ttl#ah>;
+   foaf:interest dbr:Machine_Learning , dbr:Big_data , dbr:SQL ; 
+   social:hasEnemy <http://users.dcc.uchile.cl/~ahogan/abot.ttl#ab> ;
+   social:likesMovie dbr:Interestelar , dbr:2012 , dbr:ZWar , dbr:Avengers_Endgame ;
+   social:hasSpiritAnimal dbr:Dolphin ;
+   social:hasFavouritePlatonicSolid dbr:Pyramids ;
+   foaf:myersBriggs "ENTJ" ;
+   foaf:phone 24150003 ;
+   foaf:nick "Matilo" .
